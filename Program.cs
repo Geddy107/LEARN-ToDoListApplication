@@ -82,7 +82,7 @@ namespace bigBadInClass
         {
             string txtPath = @"C:\Users\Geddy107\Desktop\csharpUserList.rtf";// setting the path for the txt document that the list will write to.
 
-            List<string> toDoList = File.ReadAllLines(txtPath).ToList();// setting all input to toDoList to the text path 
+            List<string> toDoList = File.ReadAllLines(txtPath).ToList();// setting all input to toDoList to the text path.
 
             string list = "";
 
@@ -96,7 +96,11 @@ namespace bigBadInClass
                 
                 
                 list = Console.ReadLine();
-                toDoList.Add(list);
+                if (list != "")  // makes sure that there are no blank spaces in the list.
+                {
+                    toDoList.Add(list); 
+                }
+               
 
 
             } while (!string.IsNullOrEmpty(list));
