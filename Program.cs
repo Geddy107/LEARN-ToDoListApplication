@@ -222,12 +222,12 @@ namespace bigBadInClass
                 else if (ckey.Key == ConsoleKey.Enter )
                 {
                     
-                    actioned.Add(" " + lines[index] + "^");  //what can I use here that will allow me to "mark"^ the specific string that is at the selected index on the Consol?
+                    actioned.Add(lines[index] + "^");  //having an issue wher the first char of first selected string is cut off.
                 }
 
 
+                
 
-               
 
 
 
