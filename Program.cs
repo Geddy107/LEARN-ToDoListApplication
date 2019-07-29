@@ -176,7 +176,8 @@ namespace bigBadInClass
             string txtPath = @"C:\Users\Geddy107\Desktop\csharpUserList.rtf";
             
             List<string> lines = File.ReadAllLines(txtPath).ToList();
-            List<string> actioned = new List<string>();
+            //List<string> actioned = new List<string>();
+            
 
             ConsoleKeyInfo ckey;
          
@@ -219,16 +220,16 @@ namespace bigBadInClass
 
                     else
                     { index--; }
-                else if (ckey.Key == ConsoleKey.Enter )
-                {
-                    
-                    actioned.Add(lines[index] + "^");  //having an issue wher the first char of first selected string is cut off.
-                }
+                //else if (ckey.Key == ConsoleKey.Enter)
+                //{
+
+                //    actioned.Add(lines[index] + "^");  //having an issue wher the first char of first selected string is cut off.
+                //}
+
+
 
 
                 
-
-
 
 
 
@@ -239,8 +240,8 @@ namespace bigBadInClass
 
             } while (ckey.Key != ConsoleKey.Escape);
 
-            actioned.ForEach(Console.WriteLine);
-            Console.ReadLine();
+            
+
         }
 
 
